@@ -38,11 +38,14 @@ function verifierPayload(array $data, array $file)
 
     return null;
 }
-
+// creer une fonction qui a comme variables  un tableau de data et un tableau de file//
 function convertirPayloadEnObjet(array $data, array $file)
 {
+
     $fichier = enregistrerFichierEnvoye($file["product-photo-file"]);
+// creer un objet appelé new Produit en instanciant//
     $produit = new Produit();
+ //accéder aux attributs avec ->//   
     $produit->nom = $data['product-name'];
     $produit->prix = $data['product-price'];
     $produit->image = $fichier;
